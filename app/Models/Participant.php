@@ -6,6 +6,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class Participant extends Model
 {
@@ -27,7 +28,7 @@ class Participant extends Model
     ];
 
     protected $casts = [
-        'tanggal_lahir' => 'date'
+        'tanggal_lahir' => 'datetime'
     ];
 
     // Relationship dengan Program
@@ -37,9 +38,9 @@ class Participant extends Model
     }
 
     // Accessor untuk umur
-    public function getUmurAttribute()
+    public function getUmurAttribute(): mixed
     {
-        return $this->tanggal_lahir->age;
+        return Carbon::instance($this->tanggal_lahir)->age;
     }
 
     // Accessor untuk jenis kelamin lengkap

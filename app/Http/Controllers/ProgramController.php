@@ -16,7 +16,7 @@ class ProgramController extends Controller
             ? Program::all()
             : Program::where('created_by', $user->id)->get();
 
-        return view('programs.index', compact('programs'));
+    return view('programs.index', compact('programs'));
     }
 
 
