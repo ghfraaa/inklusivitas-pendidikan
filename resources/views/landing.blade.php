@@ -373,7 +373,7 @@
                             @auth
                                 <a href="{{ url('/dashboard') }}"
                                     class="cta-button px-8 py-4 font-bold rounded-xl text-md transform hover:scale-105 transition-all pulse-glow flex items-center gap-2">
-                                    <span>>Dashboard</span></a>
+                                    <span>Dashboard</span></a>
                             @else
                                 <a href="{{ route('login') }}"
                                     class="cta-button2 text-white font-semibold px-6 py-3 rounded-xl transform hover:scale-105 hover:shadow-xl hover:border-white transition-all flex items-center gap-2">
@@ -451,7 +451,7 @@
     <main class="relative">
         <!-- About Section -->
         <section id="about" class="py-20 px-4 md:px-8"></section>
-        <div class="max-w-7xl mx-auto">
+        <div class="max-w-6xl mx-auto">
             <div class="text-center mb-20 section-reveal">
                 <div
                     class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl mb-8 pulse-glow">
@@ -568,7 +568,7 @@
         </section>
 
         <!-- Programs Section -->
-        <section id="program" class="py-20 px-4 md:px-8 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+        <section id="program" class="py-20 px-4 md:px-8 relative overflow-hidden">
             <div class="max-w-7xl mx-auto">
                 <!-- Heading -->
                 <div class="text-center mb-16 section-reveal">
@@ -608,7 +608,7 @@
                                     @endif
                                     shadow-sm mr-2">
                                     <i class="fas fa-circle mr-1 text-[0.6em]
-                                        @if($program->status === 'aktif') text-green-500
+                                        @if($program->status === 'aktif') text-green-500 animate-pulse
                                         @elseif($program->status === 'pending') text-yellow-500
                                         @else text-gray-400
                                         @endif"></i>
@@ -644,7 +644,7 @@
                     <circle cx=\"50\" cy=\"50\" r=\"1\" fill=\"white\" opacity=\"0.1\" />
                 </pattern>
             </defs>
-            <rect width=\"100\" height=\"100\" fill=\"url(%23grain)\" /></svg>');">
+            <rect width=\"100\" height=\"100\" fill=\"url(%23grain)\" /></svg>
             <div class="max-w-6xl mx-auto px-6">
                 <div class="text-center mb-16 section-reveal">
                     <h3 class="text-4xl lg:text-5xl font-bold text-white mb-6">Dampak yang Telah Kami

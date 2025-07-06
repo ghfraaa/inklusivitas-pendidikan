@@ -121,10 +121,9 @@
                         <div class="p-3 bg-white/20 rounded-lg backdrop-blur-sm">
                             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M19 11H5m14-7H5a2 2 0 00-2 2v7m18-7l-6 6 6 6"></path>
+                                    d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>
                             </svg>
                         </div>
-                        <div class="text-white/80 text-sm font-medium animate-float">📊</div>
                     </div>
                     <h2 class="text-white/90 text-lg font-semibold mb-2">Total Program</h2>
                     <p class="text-white text-4xl font-bold">{{ $totalPrograms }}</p>
@@ -148,11 +147,11 @@
                         <div class="p-3 bg-white/20 rounded-lg backdrop-blur-sm">
                             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z">
+                                    d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z">
                                 </path>
                             </svg>
                         </div>
-                        <div class="text-white/80 text-sm font-medium animate-float">👥</div>
+
                     </div>
                     <h2 class="text-white/90 text-lg font-semibold mb-2">Total Peserta</h2>
                     <p class="text-white text-4xl font-bold">{{ $totalParticipants }}</p>
@@ -179,7 +178,6 @@
                                     d="M13 10V3L4 14h7v7l9-11h-7z"></path>
                             </svg>
                         </div>
-                        <div class="text-white/80 text-sm font-medium animate-float">⚡</div>
                     </div>
                     <h2 class="text-white/90 text-lg font-semibold mb-2">Program Aktif</h2>
                     <p class="text-white text-4xl font-bold">{{ $activePrograms }}</p>

@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>@yield('title', 'Aplikasi Inklusif')</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @vite([ 'resources/js/app.js'])
     <script src="https://cdn.tailwindcss.com"></script>
+    
 </head>
 
 <body class="bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
