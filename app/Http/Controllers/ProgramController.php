@@ -16,8 +16,15 @@ class ProgramController extends Controller
             ? Program::all()
             : Program::where('created_by', $user->id)->get();
 
-    return view('programs.index', compact('programs'));
+        return view('programs.index', compact('programs'));
     }
+
+    public function indexForStudent()
+    {
+        $programs = Program::all();
+        return view('programs.student-index', compact('programs'));
+    }
+
 
 
     public function create()
@@ -71,7 +78,7 @@ class ProgramController extends Controller
 
     public function update(Request $request, Program $program)
     {
-        $this->authorize('update', $program); 
+        $this->authorize('update', $program);
 
         $request->validate([
             'nama_program' => 'required|string|max:255',

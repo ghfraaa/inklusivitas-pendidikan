@@ -61,13 +61,33 @@ class ParticipantController extends Controller
     public function edit(Participant $participant)
     {
         $this->authorize('update', $participant);
-        return view('participants.edit', compact('participant'));
+
+        $programs = Program::aktif()->get(); // <-- tambah ini
+        return view('participants.edit', compact('participant', 'programs'));
     }
 
     public function update(Request $request, Participant $participant)
     {
         $this->authorize('update', $participant);
-        // lanjut update...
+
+        $data = $request->validate([
+            'nama_lengkap' => 'required|string|max:255',
+            'email' => 'required|email',
+            'no_telepon' => 'required|string|max:20',
+            'tanggal_lahir' => 'required|date',
+            'jenis_kelamin' => 'required|in:L,P',
+            'jenis_disabilitas' => 'required|string',
+            'kebutuhan_khusus' => 'nullable|string',
+            'alamat' => 'required|string',
+            'nama_wali' => 'nullable|string|max:255',
+            'kontak_wali' => 'nullable|string|max:20',
+            'program_id' => 'required|exists:programs,id',
+            'status_pendaftaran' => 'required|in:pending,diterima,ditolak',
+        ]);
+
+        $participant->update($data);
+
+        return redirect()->route('participants.index')->with('success', 'Data peserta diperbarui.');
     }
 
     public function destroy(Participant $participant)

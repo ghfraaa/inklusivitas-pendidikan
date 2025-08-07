@@ -52,10 +52,15 @@ class User extends Authenticatable
         return $this->role === 'coordinator';
     }
 
+    public function isParticipant()
+    {
+        return $this->role === 'participant';
+    }
+
     // Get role display name
     public function getRoleDisplayAttribute()
     {
-        return $this->role === 'admin' ? 'Administrator' : 'Koordinator';
+        return $this->role === 'admin' ? 'Administrator' : ($this->role === 'coordinator' ? 'Koordinator' : 'Participant');
     }
 
     // Scope untuk admin
@@ -68,5 +73,10 @@ class User extends Authenticatable
     public function scopeCoordinator($query)
     {
         return $query->where('role', 'coordinator');
+    }
+
+    public function scopeParticipant($query)
+    {
+        return $query->where('role', 'participant');
     }
 }

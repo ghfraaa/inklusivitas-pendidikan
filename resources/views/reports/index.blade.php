@@ -323,7 +323,7 @@
                                             <div class="w-2 h-8 bg-gradient-to-b from-indigo-400 to-purple-500 rounded-full mr-3 opacity-70"></div>
                                             <div>
                                                 <div class="text-base font-semibold text-gray-900 group-hover:text-indigo-700 transition-colors duration-300">
-                                                    {{ $program->name }}
+                                                    {{ $program->nama_program }}
                                                 </div>
                                             </div>
                                         </div>
